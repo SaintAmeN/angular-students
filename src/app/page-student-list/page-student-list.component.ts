@@ -23,7 +23,18 @@ export class PageStudentListComponent {
         nazwisko: 'Gawel',
         dataUrodzenia: '2022-01-05'
       },
-
+      {
+        lp: 2,
+        imie: 'Gawel',
+        nazwisko: 'Pawel',
+        dataUrodzenia: '2022-01-05'
+      },
+      {
+        lp: 3,
+        imie: 'Pawelek',
+        nazwisko: 'Gawelek',
+        dataUrodzenia: '2022-01-05'
+      },
     ]
   }
 }
