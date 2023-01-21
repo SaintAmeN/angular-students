@@ -5,16 +5,24 @@ import { AppComponent } from './app.component';
 import { TloSrodekComponent } from './tlo-srodek/tlo-srodek.component';
 import { PanelLewyComponent } from './panel-lewy/panel-lewy.component';
 import { PanelPrawyGlownyComponent } from './panel-prawy-glowny/panel-prawy-glowny.component';
+import {AppRoutingModule} from "./app-routing.module";
+import { PageMainComponent } from './page-main/page-main.component';
+import { PageStudentListComponent } from './page-student-list/page-student-list.component';
+import { PageStudentFormComponent } from './page-student-form/page-student-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TloSrodekComponent,
     PanelLewyComponent,
-    PanelPrawyGlownyComponent
+    PanelPrawyGlownyComponent,
+    PageMainComponent,
+    PageStudentListComponent,
+    PageStudentFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
