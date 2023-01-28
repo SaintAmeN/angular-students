@@ -5,6 +5,7 @@ import {StudentModel} from "../model/StudentModel";
   providedIn: 'root'
 })
 export class StudentService {
+  nextStudentId: number = 1
   studentList: StudentModel[] = []
 
   constructor() {
@@ -22,6 +23,24 @@ export class StudentService {
   // :StudentModel  => typ parametru
   // :void          => typ zwracany funkcji
   dodajStudenta(nowyStudent: StudentModel): void {
+    nowyStudent.id = this.nextStudentId++
     this.studentList.push(nowyStudent)
+  }
+
+  usunStudentaWSerwisie(id: number): void {
+    let znalezionyStudent;
+    for (const student of this.studentList) {
+      if (student.id == id) {
+        znalezionyStudent = student;
+        break;
+      }
+    }
+
+    if (znalezionyStudent == undefined){
+      return
+    }
+
+    const index = this.studentList.indexOf(znalezionyStudent, 0)
+    this.studentList.splice(index, 1) // usunięcie 1 elementu na pozycji index
   }
 }
